@@ -28,6 +28,7 @@
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#663fb5">
     <link rel="stylesheet" href="css/landio.css">
+    <link rel="stylesheet" href="css/contact.css"
   </head>
 
   <body>
@@ -38,7 +39,7 @@
     <nav class="navbar navbar-dark bg-inverse bg-inverse-custom navbar-fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">
-        <img src="img/icon-logo.png" alt="iPad mock" class="img-fluid wp wp-3">
+        <img src="img/icon-logo.png" alt="Logo" class="img-fluid wp wp-3">
           <span class="sr-only">ActiveRank</span>
         </a>
         <a class="navbar-toggler hidden-md-up pull-xs-right" data-toggle="collapse" href="#collapsingNavbar" aria-expanded="false" aria-controls="collapsingNavbar">
@@ -54,20 +55,23 @@
 
     <header class="jumbotron bg-inverse text-xs-center center-vertically" role="banner">
       <div class="container">
-        <h1 class="display-3">ActiveRank</h1>
-        <h2 class="m-b-3">Ethical Intelligence, for women, with a click of <a href="ui-elements.html" class="jumbolink">a button</a>.</h2>
-        <a class="btn btn-secondary-outline m-b-1" href="https://docs.google.com/forms/d/e/1FAIpQLSeECYjKd1bdu-bahOhqJu665RrQWmlkSyqpu83GRr1Fx-fPzA/viewform" role="button"><span class="icon-sketch"></span>Try our beta</a>
+        <h1 class="display-3" style="color: #fff">ActiveRank</h1>
+        <h2 class="m-b-3" style="color: #fff" >Do your part, for workplace equality for women.</h2>
+        <a class="btn btn-secondary-outline m-b-1" href="https://docs.google.com/forms/d/e/1FAIpQLSeECYjKd1bdu-bahOhqJu665RrQWmlkSyqpu83GRr1Fx-fPzA/viewform" role="button"><span class="icon-sketch"></span>Try the beta</a>
        
       </div>
     </header>
+
+    <section class="news section-intro bg-faded text-xs-center">
+        </section>
 
     <!-- Intro
     ================================================== -->
 
     <section class="section-intro bg-faded text-xs-center">
       <div class="container">
-        <h3 class="wp wp-1">About Us</h3>
-        <p class="lead wp wp-2">ActiveRank is an innovative recommendation system to make shoopers more aware of how women-friendly the companies they shop at are, and where to shop to better support women employees. In Computer science and mathematics,26% of the workforce are women. In the UK, only 21% of senior roles are held by women. All over the board, there is room for improvement. Consumers have the power to influence companies to be more womne-friendly,and that's where our extension comes in.</p>
+        <h3 class="wp wp-1">It's Time to Shatter the Glass Ceiling</h3>
+        <p class="lead wp wp-2">It is 2017, and women are still not being treated equally to men, from the wage gap and microagressions in the workplace to policies that burden working mothers. Look no further than Susan J. Fowler's account on her experience at Uber to see this in action. We all have a role to call out sexism, and to support companies that are doing well with treating their female employees. That's where ActiveRank comes in. This extension enables shoppers and internet users to see how women-friendly the companies they shop at or support are, based on crowd-sourced reviews and metrics from women working at the companies. </p>
       </div>
     </section>
 
@@ -77,11 +81,13 @@
     <section class="section-features text-xs-center">
       <div class="container">
         <div class="row">
+       <p class="card-text" style="font-size:40px; margin-top:-50px;">Features</p>
+
           <div class="col-md-4">
             <div class="card">
               <div class="card-block">
-                <span class="icon-pen display-1"></span>
-                <h4 class="card-title">Company ratings</h4>
+                <img src="img/rank.jpg" alt="Rank" style="width:304px;height:228px;">
+                <h4 class="card-title"  style="margin-top:40px;">Company ratings</h4>
                 <p class="card-text">Find out how the companies you shop at treat their female employees.</p>
               </div>
             </div>
@@ -89,18 +95,19 @@
           <div class="col-md-4">
             <div class="card">
               <div class="card-block">
-                <span class="icon-thunderbolt display-1"></span>
-                <h4 class="card-title">Suggestions</h4>
-                <p class="card-text">Find out which companies that are more women-friendly are selling what you're buying.</p>
+                               <img src="img/breakdowns.jpg" alt="Mountain View" style="width:304px;height:228px;">
+                <h4 class="card-title" style="margin-top:40px;">Breakdowns</h4>
+                <p class="card-text">Obviously, companies can have the same ranking but have extremely different work conditions for women. See a breakdown of ratings, to see how the company does in benefits, salary, and representation of women.</p>
+
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card m-b-0">
-              <div class="card-block">
-                <span class="icon-heart display-1"></span>
-                <h4 class="card-title">Alerts</h4>
-                <p class="card-text">Get notifications of companies to avoid. Before you click submit on a shopping site, if the company is especially bad, we'll let you know.</p>
+              <div class="card-block">          
+             <img src="img/suggestions.jpg" alt="Mountain View" style="width:304px;height:228px;">
+                <h4 class="card-title"  style="margin-top:40px;">Suggestions</h4>
+                <p class="card-text">Find out which companies that are more women-friendly are selling what you're buying.</p>
               </div>
             </div>
           </div>
@@ -116,15 +123,23 @@
         <h3 class="text-xs-center">Our Methodology</h3>
         <div class="row p-y-3">
      
-            <p class="wp wp-7">With our team of statisticians and EEOC experts, we use a hollistic approach to rate companies, using three pillars for rating: salary differences, benefits, and percentage of women in companies. To find out more about our ranking methodology, please contact us at questions@activerank.com. </p>
+            <p class="wp wp-7">We use a weighted algorithm using self-reported salary reviews from women on Payscale, the leading source of workplace reviews, and FairyGodBoss, which is a leading source for benefits data. Due to lack of EEOC data, it is extremely challenging to query data fromt thoe sources. We are always looking for suggestions to better ways to rank, so if you have any suggestions, shoot them over to activerankapp@gmail.com! </p>
      
         </div>
       </div>
     </section>
 
+        <header class="quote bg-inverse text-xs-center "  >
+      <div class="container">      
+       <h2 class="m-b-3"></h2>
+              <h2 class="m-b-3"></h2>
+   
+      </div>
+      <div class="container">   </div>
+    </header>
    <!-- Testimonials
     ================================================== -->
-
+<!--
     <section class="section-testimonials text-xs-center bg-inverse">
       <div class="container">
         <h3 class="sr-only">Team</h3>
@@ -174,36 +189,53 @@
 
 
 
-    <!-- Sign Up
+  Sign Up
     ================================================== -->
 
-    <section class="section-signup bg-faded">
-      <div class="container">
-        <h3 class="text-xs-center m-b-3">Sign up to receive free updates as soon as they hit!</h3>
-        <form>
-          <div class="row">
-            <div class="col-md-6 col-xl-3">
-              <div class="form-group has-icon-left form-control-name">
-                <label class="sr-only" for="inputName">Your name</label>
-                <input type="text" class="form-control form-control-lg" id="inputName" placeholder="Your name">
-              </div>
-            </div>
-            <div class="col-md-6 col-xl-3">
-              <div class="form-group has-icon-left form-control-email">
-                <label class="sr-only" for="inputEmail">Email address</label>
-                <input type="email" class="form-control form-control-lg" id="inputEmail" placeholder="Email address" autocomplete="off">
-              </div>
-            </div>
-         
-            <div class="col-md-6 col-xl-3">
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block move">Sign up for free!</button>
-              </div>
-            </div>
-          </div>
-    
-        </form>
-      </div>
+    <section class="section-signup bg-faded" style="background:#663fb5 url('img/contact.jpg') no-repeat center; background-size:cover;height:500px;">
+      <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"></head>
+<br />
+<div class="inner contact" >
+                <!-- Form Area -->
+                <div class="contact-form" style="">
+                    <!-- Form -->
+                    <form id="contact-us" method="post" style=" width:1000px; margin-left:250px;"  action="#">
+                      <p style="color:#fff; font-size:70px;  text-align: center;">Got Feedback?</p>
+                        <!-- Left Inputs -->
+                        <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+                            <!-- Name -->
+                            <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
+                            <!-- Email -->
+                            <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+                            <!-- Subject -->
+                            <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
+                        </div><!-- End Left Inputs -->
+                        <!-- Right Inputs -->
+                        <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+                            <!-- Message -->
+                            <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+                        </div><!-- End Right Inputs -->
+                        <!-- Bottom Submit -->
+                        <div class="relative fullwidth col-xs-12">
+                            <!-- Send Button -->
+                            <button type="submit" id="submit" name="submit" class="form-btn semibold">Submit</button> 
+                        </div><!-- End Bottom Submit -->
+                        <!-- Clear -->
+                        <div class="clear"></div>
+                    </form>
+
+                    <!-- Your Mail Message -->
+                    <div class="mail-message-area">
+                        <!-- Message -->
+                        <div class="alert gray-bg mail-message not-visible-message">
+                            <strong>Thank You !</strong> Your email has been delivered.
+                        </div>
+                    </div>
+
+                </div><!-- End Contact Form Area -->
+            </div><!-- End Inner -->
+
+
     </section>
 
     <!-- Footer
@@ -215,7 +247,7 @@
           <div class="col-md-6 col-lg-5">
             <div class="media">
               <div class="media-left">
-                <img src="img/icon-logo-mascot.png"></span>
+                <img src="img/icon-logo.png"></span>
               </div>
             
             </div>
@@ -225,9 +257,9 @@
               <li class="nav-item">
            
               </li>
-              <li class="nav-item"><a class="nav-link" href="https://m.facebook.com/profile.php?id=377955992586116&tsid=0.5942894155563596&source=typeahead">Facebook</a></li>
+              <li class="nav-item"><a class="nav-link" style="font-size: 20px;" href="https://m.facebook.com/profile.php?id=377955992586116&tsid=0.5942894155563596&source=typeahead">Facebook</a></li>
            
-              <li class="nav-item"><a class="nav-link scroll-top" href="#totop">Back to top <span class="icon-caret-up"></span></a></li>
+              <li class="nav-item"><a class="nav-link scroll-top"  style="font-size: 20px;" href="#totop">Back to top <span class="icon-caret-up"></span></a></li>
             </ul>
           </div>
         </div>
