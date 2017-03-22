@@ -28,9 +28,46 @@
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#663fb5">
     <link rel="stylesheet" href="css/landio.css">
-    <link rel="stylesheet" href="css/contact.css"
-  </head>
+    <link rel="stylesheet" href="css/contact.css">
+        <style>
+      body{font:12px/1.2 Verdana, sans-serif; padding:0 10px;}
+      a:link, a:visited{text-decoration:none; color:#416CE5; border-bottom:1px solid #416CE5;}
+      h2{font-size:13px; margin:15px 0 0 0;}
+    </style>
+    <link rel="stylesheet" href="colorbox.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="jquery.colorbox.js"></script>
+    <script>
+      $(document).ready(function(){
+        //Examples of how to assign the Colorbox event to elements
+        $(".group1").colorbox({rel:'group1'});
+        $(".group2").colorbox({rel:'group2', transition:"fade"});
+        $(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+        $(".group4").colorbox({rel:'group4', slideshow:true});
+        $(".ajax").colorbox();
+        $(".youtube").colorbox({iframe:true, innerWidth:60, innerHeight:30});
+        $(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
+        $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+        $(".inline").colorbox({inline:true, width:"50%"});
+        $(".callbacks").colorbox({
+          onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+          onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+          onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+          onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+          onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+        });
 
+        $('.non-retina').colorbox({rel:'group5', transition:'none'})
+        $('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
+        
+        //Example of preserving a JavaScript event for inline calls.
+        $("#click").click(function(){ 
+          $('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+          return false;
+        });
+      });
+    </script>
+  </head>
   <body>
 
     <!-- Navigation
@@ -57,8 +94,10 @@
       <div class="container">
         <h1 class="display-3" style="color: #fff">ActiveRank</h1>
         <h2 class="m-b-3" style="color: #fff" >Do your part, for workplace equality for women.</h2>
-        <a class="btn btn-secondary-outline m-b-1" href="https://chrome.google.com/webstore/detail/activerank/gbmkddclgeobjpfahfmoogcncagfibfo" role="button"><span class="icon-sketch"></span>Try the beta</a>
-       
+        <a class="btn btn-secondary-outline m-b-1" style="font-size:16px; color:white;"  href="https://chrome.google.com/webstore/detail/activerank/gbmkddclgeobjpfahfmoogcncagfibfo" role="button"><span class="icon-sketch"></span>Try the beta</a>
+
+          <p><a class='youtube btn-secondary-outline m-b-1' style="font-size:20px; color:White;" href="https://www.youtube.com/embed/-wijV649SUQ">Watch our Demo</a></p>
+
       </div>
     </header>
 
@@ -269,4 +308,52 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/landio.min.js"></script>
   </body>
+  <script>
+  // popup examples
+$( document ).on( "pagecreate", function() {
+    // The window width and height are decreased by 30 to take the tolerance of 15 pixels at each side into account
+    function scale( width, height, padding, border ) {
+        var scrWidth = $( window ).width() - 30,
+            scrHeight = $( window ).height() - 30,
+            ifrPadding = 2 * padding,
+            ifrBorder = 2 * border,
+            ifrWidth = width + ifrPadding + ifrBorder,
+            ifrHeight = height + ifrPadding + ifrBorder,
+            h, w;
+        if ( ifrWidth < scrWidth && ifrHeight < scrHeight ) {
+            w = ifrWidth;
+            h = ifrHeight;
+        } else if ( ( ifrWidth / scrWidth ) > ( ifrHeight / scrHeight ) ) {
+            w = scrWidth;
+            h = ( scrWidth / ifrWidth ) * ifrHeight;
+        } else {
+            h = scrHeight;
+            w = ( scrHeight / ifrHeight ) * ifrWidth;
+        }
+        return {
+            'width': w - ( ifrPadding + ifrBorder ),
+            'height': h - ( ifrPadding + ifrBorder )
+        };
+    };
+    $( ".ui-popup iframe" )
+        .attr( "width", 0 )
+        .attr( "height", "auto" );
+    $( "#popupVideo" ).on({
+        popupbeforeposition: function() {
+            // call our custom function scale() to get the width and height
+            var size = scale( 497, 298, 15, 1 ),
+                w = size.width,
+                h = size.height;
+            $( "#popupVideo iframe" )
+                .attr( "width", w )
+                .attr( "height", h );
+        },
+        popupafterclose: function() {
+            $( "#popupVideo iframe" )
+                .attr( "width", 0 )
+                .attr( "height", 0 );
+        }
+    });
+});
+</script>
 </html>
